@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HAR Resource Index — From Handcrafted Features to Foundation Models</title>
+<meta name="description" content="A companion index of review papers, state-of-the-art method implementations, and benchmark datasets for video-based Human Activity Recognition.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2216%22 fill=%22%2314120f%22/><rect x=%2222%22 y=%2230%22 width=%2256%22 height=%2240%22 rx=%224%22 fill=%22none%22 stroke=%22%23e3a64b%22 stroke-width=%226%22/><circle cx=%2234%22 cy=%2230%22 r=%225%22 fill=%22%23e3a64b%22/><circle cx=%2266%22 cy=%2230%22 r=%225%22 fill=%22%23e3a64b%22/><circle cx=%2234%22 cy=%2270%22 r=%225%22 fill=%22%23e3a64b%22/><circle cx=%2266%22 cy=%2270%22 r=%225%22 fill=%22%23e3a64b%22/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<div class="sprocket-row" aria-hidden="true"></div>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow"><span class="rec-dot" aria-hidden="true"></span>COMPANION INDEX &middot; LIVE LINKS</p>
+    <h1>HAR Resource Index</h1>
+    <p class="hero-sub">A working reference shelf for <em>“From Handcrafted Features to Foundation Models: A Critical Perspective on the Evolution, Benchmarks, and Future of Human Activity Recognition.”</em> Three reels — literature, methods, data — kept in one place so you don't have to re-search them.</p>
+    <div class="hero-meta">
+      <span>UMA &amp; M. K. SALICE</span>
+      <span class="sep">/</span>
+      <span>IIT GUWAHATI</span>
+      <span class="sep">/</span>
+      <span id="last-verified-tag">VERIFIED AUG 2026</span>
+    </div>
+  </div>
+</header>
+
+<div class="sprocket-row" aria-hidden="true"></div>
+
+<main class="wrap">
+
+  <section class="filmstrip-section" aria-label="Evolution of HAR, six methodological stages">
+    <p class="section-kicker">TIMELINE &mdash; six stages, one throughline</p>
+    <div class="filmstrip" id="filmstrip">
+      <!-- frames injected by script.js from data, but static fallback below for no-JS -->
+      <noscript>
+        <div class="frame"><span class="frame-year">1999–2008</span><span class="frame-name">Handcrafted Descriptors</span></div>
+        <div class="frame"><span class="frame-year">2007–2015</span><span class="frame-name">CNN / RNN</span></div>
+        <div class="frame"><span class="frame-year">2013–2018</span><span class="frame-name">3D CNN + Two-Stream</span></div>
+        <div class="frame"><span class="frame-year">2018–2021</span><span class="frame-name">Video Transformers</span></div>
+        <div class="frame"><span class="frame-year">2020–Present</span><span class="frame-name">Self-Supervised Pretraining</span></div>
+        <div class="frame"><span class="frame-year">2023–Present</span><span class="frame-name">Foundation / VLMs</span></div>
+      </noscript>
+    </div>
+  </section>
+
+  <section class="intro-block">
+    <p>Every link below was opened and checked by hand while building this page. GitHub stars and paper venues change — if something has moved, please open an issue or send a pull request rather than assuming the page is wrong. Use the search box inside each reel to jump straight to a row.</p>
+  </section>
+
+  <!-- ============ REEL 01 — SURVEYS ============ -->
+  <section class="reel" id="reel-surveys">
+    <div class="reel-head">
+      <p class="reel-tag">REEL 01 / 03</p>
+      <h2>Review &amp; Survey Literature</h2>
+      <p class="reel-intro">The eight surveys this index cross-references, ordered by year. Each one framed HAR differently — by actor count, by challenge, by architecture family — before this survey proposed the emergence&ndash;limitation&ndash;succession reading. Sources link to the DOI or arXiv page, not a PDF mirror.</p>
+    </div>
+    <div class="table-tools">
+      <input type="search" class="filter-input" data-target="table-surveys" placeholder="Filter by author, venue, year…" aria-label="Filter survey table">
+    </div>
+    <div class="table-scroll">
+      <table id="table-surveys">
+        <thead>
+          <tr>
+            <th class="col-year">Year</th>
+            <th>Survey</th>
+            <th>Venue</th>
+            <th class="col-link">Source</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="mono">2011</td>
+            <td><strong>Aggarwal &amp; Ryoo</strong> — Human activity analysis: A review</td>
+            <td>ACM Computing Surveys</td>
+            <td><a href="https://doi.org/10.1145/1922649.1922653" target="_blank" rel="noopener">DOI ↗</a></td>
+          </tr>
+          <tr>
+            <td class="mono">2015</td>
+            <td><strong>Vrigkas, Nikou &amp; Kakadiaris</strong> — A review of human activity recognition methods</td>
+            <td>Frontiers in Robotics and AI</td>
+            <td><a href="https://doi.org/10.3389/frobt.2015.00028" target="_blank" rel="noopener">DOI ↗</a></td>
+          </tr>
+          <tr>
+            <td class="mono">2019</td>
+            <td><strong>Kaur, Rao &amp; Joon</strong> — Literature review of action recognition in the wild</td>
+            <td>arXiv:1911.12249</td>
+            <td><a href="https://arxiv.org/abs/1911.12249" target="_blank" rel="noopener">arXiv ↗</a></td>
+          </tr>
+          <tr>
+            <td class="mono">2020</td>
+            <td><strong>Jegham, Khalifa, Alouani &amp; Mahjoub</strong> — Vision-based human action recognition: an overview and real-world challenges</td>
+            <td>Forensic Science International: Digital Investigation</td>
+            <td><a href="https://doi.org/10.1016/j.fsidi.2019.200901" target="_blank" rel="noopener">DOI ↗</a></td>
+          </tr>
+          <tr>
+            <td class="mono">2022</td>
+            <td><strong>Kong &amp; Fu</strong> — Human action recognition and prediction: A survey</td>
+            <td>International Journal of Computer Vision</td>
+            <td><a href="https://doi.org/10.1007/s11263-022-01594-9" target="_blank" rel="noopener">DOI ↗</a></td>
+          </tr>
+          <tr>
+            <td class="mono">2023</td>
+            <td><strong>Camarena, Gonzalez-Mendoza, Chang &amp; Cuevas-Ascencio</strong> — An overview of the vision-based human action recognition field</td>
+            <td>Mathematical and Computational Applications</td>
+            <td><a href="https://doi.org/10.3390/mca28020061" target="_blank" rel="noopener">DOI ↗</a></td>
+          </tr>
+          <tr>
+            <td class="mono">2023</td>
+            <td><strong>Selva, Johansen, Escalera, Nasrollahi, Moeslund &amp; Clap&eacute;s</strong> — Video transformers: A survey</td>
+            <td>IEEE TPAMI</td>
+            <td><a href="https://arxiv.org/abs/2201.05991" target="_blank" rel="noopener">arXiv ↗</a></td>
+          </tr>
+          <tr class="row-this-survey">
+            <td class="mono">2026</td>
+            <td><strong>Uma &amp; Salice</strong> — From Handcrafted Features to Foundation Models <span class="tag-this">this survey</span></td>
+            <td>Preprint, submitted to Elsevier</td>
+            <td><a href="#" class="link-placeholder" data-placeholder title="Add your DOI / arXiv / repo link here once available">add link ↗</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ============ REEL 02 — SOTA METHODS ============ -->
+  <section class="reel" id="reel-methods">
+    <div class="reel-head">
+      <p class="reel-tag">REEL 02 / 03</p>
+      <h2>State-of-the-Art Methods</h2>
+      <p class="reel-intro">The ten representative methods compared in the survey's benchmark figure, each with its official implementation. Badge colour follows the same architecture-family legend used in the paper: <span class="legend-chip arch-cnn">3D&nbsp;CNN</span> <span class="legend-chip arch-transformer">Transformer</span> <span class="legend-chip arch-ssl">SSL&nbsp;+&nbsp;Transf.</span> <span class="legend-chip arch-vlm">VLM</span>.</p>
+    </div>
+    <div class="table-tools">
+      <input type="search" class="filter-input" data-target="table-methods" placeholder="Filter by method, family, year…" aria-label="Filter methods table">
+    </div>
+    <div class="table-scroll">
+      <table id="table-methods">
+        <thead>
+          <tr>
+            <th class="col-year">Year</th>
+            <th>Method</th>
+            <th>Family</th>
+            <th class="col-link">Paper</th>
+            <th class="col-link">Code</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="mono">2017</td>
+            <td><strong>I3D</strong> — Quo Vadis, Action Recognition?</td>
+            <td><span class="badge arch-cnn">3D CNN</span></td>
+            <td><a href="https://arxiv.org/abs/1705.07750" target="_blank" rel="noopener">arXiv ↗</a></td>
+            <td><a href="https://github.com/google-deepmind/kinetics-i3d" target="_blank" rel="noopener">google-deepmind/kinetics-i3d ↗</a></td>
+          </tr>
+          <tr>
+            <td class="mono">2019</td>
+            <td><strong>SlowFast</strong> — SlowFast Networks for Video Recognition</td>
+            <td><span class="badge arch-cnn">Two-path CNN</span></td>
+            <td><a href="https://arxiv.org/abs/1812.03982" target="_blank" rel="noopener">arXiv ↗</a></td>
+            <td><a href="https://github.com/facebookresearch/SlowFast" target="_blank" rel="noopener">facebookresearch/SlowFast ↗</a></td>
+          </tr>
+          <tr>
+            <td class="mono">2021</td>
+            <td><strong>TimeSformer</strong> — Is Space-Time Attention All You Need?</td>
+            <td><span class="badge arch-transformer">Transformer</span></td>
+            <td><a href="https://arxiv.org/abs/2102.05095" target="_blank" rel="noopener">arXiv ↗</a></td>
+            <td><a href="https://github.com/facebookresearch/TimeSformer" target="_blank" rel="noopener">facebookresearch/TimeSformer ↗</a></td>
+          </tr>
+          <tr>
+            <td class="mono">2021</td>
+            <td><strong>ViViT</strong> — A Video Vision Transformer</td>
+            <td><span class="badge arch-transformer">Transformer</span></td>
+            <td><a href="https://arxiv.org/abs/2103.15691" target="_blank" rel="noopener">arXiv ↗</a></td>
+            <td><a href="https://github.com/google-research/scenic" target="_blank" rel="noopener">google-research/scenic ↗</a></td>
+          </tr>
+          <tr>
+            <td class="mono">2021</td>
+            <td><strong>MViT</strong> — Multiscale Vision Transformers</td>
+            <td><span class="badge arch-transformer">Transformer</span></td>
+            <td><a href="https://arxiv.org/abs/2104.11227" target="_blank" rel="noopener">arXiv ↗</a></td>
+            <td><a href="https://github.com/facebookresearch/mvit" target="_blank" rel="noopener">facebookresearch/mvit ↗</a></td>
+          </tr>
+          <tr>
+            <td class="mono">2022</td>
+            <td><strong>Video Swin</strong> — Video Swin Transformer</td>
+            <td><span class="badge arch-transformer">Transformer</span></td>
+            <td><a href="https://arxiv.org/abs/2106.13230" target="_blank" rel="noopener">arXiv ↗</a></td>
+            <td><a href="https://github.com/SwinTransformer/Video-Swin-Transformer" target="_blank" rel="noopener">SwinTransformer/Video-Swin-Transformer ↗</a></td>
+          </tr>
+          <tr>
+            <td class="mono">2022</td>
+            <td><strong>VideoMAE</strong> — Masked Autoencoders Are Data-Efficient Learners</td>
+            <td><span class="badge arch-ssl">SSL + Transf.</span></td>
+            <td><a href="https://arxiv.org/abs/2203.12602" target="_blank" rel="noopener">arXiv ↗</a></td>
+            <td><a href="https://github.com/MCG-NJU/VideoMAE" target="_blank" rel="noopener">MCG-NJU/VideoMAE ↗</a></td>
+          </tr>
+          <tr>
+            <td class="mono">2021</td>
+            <td><strong>ActionCLIP</strong> — A New Paradigm for Video Action Recognition</td>
+            <td><span class="badge arch-vlm">VLM</span></td>
+            <td><a href="https://arxiv.org/abs/2109.08472" target="_blank" rel="noopener">arXiv ↗</a></td>
+            <td><a href="https://github.com/sallymmx/ActionCLIP" target="_blank" rel="noopener">sallymmx/ActionCLIP ↗</a></td>
+          </tr>
+          <tr>
+            <td class="mono">2023</td>
+            <td><strong>Open-VCLIP</strong> — Transforming CLIP to an Open-Vocabulary Video Model</td>
+            <td><span class="badge arch-vlm">VLM</span></td>
+            <td><a href="https://arxiv.org/abs/2302.00624" target="_blank" rel="noopener">arXiv ↗</a></td>
+            <td><a href="https://github.com/wengzejia1/Open-VCLIP" target="_blank" rel="noopener">wengzejia1/Open-VCLIP ↗</a></td>
+          </tr>
+          <tr>
+            <td class="mono">2024</td>
+            <td><strong>FROSTER</strong> — Frozen CLIP Is a Strong Teacher for Open-Vocabulary AR</td>
+            <td><span class="badge arch-vlm">VLM</span></td>
+            <td><a href="https://arxiv.org/abs/2402.03241" target="_blank" rel="noopener">arXiv ↗</a></td>
+            <td><a href="https://github.com/Visual-AI/FROSTER" target="_blank" rel="noopener">Visual-AI/FROSTER ↗</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ============ REEL 03 — DATASETS ============ -->
+  <section class="reel" id="reel-datasets">
+    <div class="reel-head">
+      <p class="reel-tag">REEL 03 / 03</p>
+      <h2>Benchmark Datasets</h2>
+      <p class="reel-intro">All sixteen benchmarks consolidated in the survey's dataset table, from the earliest actor-staged sets to the largest web-scale collections. "Access" points to the dataset's own request or download page — several require a short form or an institutional email before release.</p>
+    </div>
+    <div class="table-tools">
+      <input type="search" class="filter-input" data-target="table-datasets" placeholder="Filter by dataset, modality, year…" aria-label="Filter dataset table">
+    </div>
+    <div class="table-scroll">
+      <table id="table-datasets">
+        <thead>
+          <tr>
+            <th class="col-year">Year</th>
+            <th>Dataset</th>
+            <th class="col-num">Classes</th>
+            <th>Modality</th>
+            <th class="col-link">Access</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="mono">2004</td>
+            <td><strong>KTH</strong></td>
+            <td class="mono">6</td>
+            <td>RGB</td>
+            <td><a href="https://www.csc.kth.se/cvap/actions/" target="_blank" rel="noopener">csc.kth.se ↗</a></td>
+          </tr>
+          <tr>
+            <td class="mono">2005</td>
+            <td><strong>Weizmann</strong></td>
+            <td class="mono">9</td>
+            <td>RGB</td>
+            <td><a href="https://www.wisdom.weizmann.ac.il/~vision/SpaceTimeActions.html" target="_blank" rel="noopener">weizmann.ac.il ↗</a></td>
+          </tr>
+          <tr>
+            <td class="mono">2008</td>
+            <td><strong>Hollywood2</strong></td>
+            <td class="mono">147</td>
+            <td>RGB</td>
+            <td><a href="https://www.di.ens.fr/laptev/actions/hollywood2/" target="_blank" rel="noopener">di.ens.fr ↗</a></td>
+          </tr>
+          <tr>
+            <td class="mono">2011</td>
+            <td><strong>HMDB-51</strong></td>
+            <td class="mono">51</td>
+            <td>RGB</td>
+            <td><a href="https://serre-lab.clps.brown.edu/resource/hmdb-a-large-human-motion-database/" target="_blank" rel="noopener">serre-lab.clps.brown.edu ↗</a></td>
+          </tr>
+          <tr>
+            <td class="mono">2012</td>
+            <td><strong>UCF-101</strong></td>
+            <td class="mono">101</td>
+            <td>RGB</td>
+            <td><a href="https://www.crcv.ucf.edu/data/UCF101.php" target="_blank" rel="noopener">crcv.ucf.edu ↗</a></td>
+          </tr>
+          <tr>
+            <td class="mono">2014</td>
+            <td><strong>Sports-1M</strong></td>
+            <td class="mono">487</td>
+            <td>RGB</td>
+            <td><a href="https://cs.stanford.edu/people/karpathy/deepvideo/" target="_blank" rel="noopener">cs.stanford.edu ↗</a></td>
+          </tr>
+          <tr>
+            <td class="mono">2015</td>
+            <td><strong>ActivityNet</strong></td>
+            <td class="mono">203</td>
+            <td>RGB</td>
+            <td><a href="http://activity-net.org/download.html" target="_blank" rel="noopener">activity-net.org ↗</a></td>
+          </tr>
+          <tr>
+            <td class="mono">2016</td>
+            <td><strong>NTU RGB+D</strong> <span class="tag-mini">+120</span></td>
+            <td class="mono">60/120</td>
+            <td>RGB+D+S</td>
+            <td><a href="http://rose1.ntu.edu.sg/Datasets/actionRecognition.asp" target="_blank" rel="noopener">rose1.ntu.edu.sg ↗</a></td>
+          </tr>
+          <tr>
+            <td class="mono">2019</td>
+            <td><strong>Kinetics-700</strong></td>
+            <td class="mono">700</td>
+            <td>RGB</td>
+            <td><a href="https://github.com/cvdfoundation/kinetics-dataset" target="_blank" rel="noopener">cvdfoundation/kinetics-dataset ↗</a></td>
+          </tr>
+          <tr>
+            <td class="mono">2017</td>
+            <td><strong>Something-Something</strong> <span class="tag-mini">v2</span></td>
+            <td class="mono">174</td>
+            <td>RGB</td>
+            <td><a href="https://www.qualcomm.com/developer/software/something-something-v-2-dataset" target="_blank" rel="noopener">qualcomm.com ↗</a></td>
+          </tr>
+          <tr>
+            <td class="mono">2018</td>
+            <td><strong>EPIC-Kitchens</strong></td>
+            <td class="mono">397</td>
+            <td>RGB, egocentric</td>
+            <td><a href="https://epic-kitchens.github.io/" target="_blank" rel="noopener">epic-kitchens.github.io ↗</a></td>
+          </tr>
+          <tr>
+            <td class="mono">2018</td>
+            <td><strong>UCF-Crime</strong></td>
+            <td class="mono">13</td>
+            <td>RGB, surveillance</td>
+            <td><a href="https://www.crcv.ucf.edu/projects/real-world/" target="_blank" rel="noopener">crcv.ucf.edu ↗</a></td>
+          </tr>
+          <tr>
+            <td class="mono">2019</td>
+            <td><strong>Toyota Smarthome</strong></td>
+            <td class="mono">31</td>
+            <td>RGB+D+S</td>
+            <td><a href="https://github.com/dairui01/Toyota_Smarthome" target="_blank" rel="noopener">dairui01/Toyota_Smarthome ↗</a></td>
+          </tr>
+          <tr>
+            <td class="mono">2019</td>
+            <td><strong>HACS</strong></td>
+            <td class="mono">200</td>
+            <td>RGB</td>
+            <td><a href="https://arxiv.org/abs/1712.09374" target="_blank" rel="noopener">paper &amp; request info ↗</a></td>
+          </tr>
+          <tr>
+            <td class="mono">2020</td>
+            <td><strong>FineGym</strong></td>
+            <td class="mono">530</td>
+            <td>RGB, broadcast</td>
+            <td><a href="https://sdolivia.github.io/FineGym/" target="_blank" rel="noopener">sdolivia.github.io ↗</a></td>
+          </tr>
+          <tr>
+            <td class="mono">2020</td>
+            <td><strong>Street Scene</strong></td>
+            <td class="mono">&mdash;</td>
+            <td>RGB, surveillance</td>
+            <td><a href="https://www.merl.com/demos/video-anomaly-detection" target="_blank" rel="noopener">merl.com ↗</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="note-block">
+    <h3>A note on access</h3>
+    <p>Most of these datasets are free for research use but gate the actual video files behind a license form, an institutional email check, or (for Kinetics and EPIC-Kitchens) a YouTube-ID download script that you run yourself. The links above go to the authors' own request page, not to a mirrored copy — that's deliberate, since re-hosted copies drift out of sync with corrections and takedowns.</p>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <p class="footer-title">Cite the survey</p>
+      <pre class="citation-block" id="citation-block">Uma and M. K. Salice (2026). From Handcrafted Features to
+Foundation Models: A Critical Perspective on the Evolution,
+Benchmarks, and Future of Human Activity Recognition.
+Preprint, submitted to Elsevier.</pre>
+      <button class="copy-btn" data-copy-target="citation-block">Copy citation</button>
+    </div>
+    <div>
+      <p class="footer-title">About this page</p>
+      <p class="footer-text">Static, dependency-free, and built to sit in <code>/docs</code> or the repo root of any GitHub Pages site. No build step, no tracking. See the README for how to fork and maintain your own copy.</p>
+    </div>
+    <div>
+      <p class="footer-title">Found a dead link?</p>
+      <p class="footer-text">Open an issue or a pull request on this repository — three-table resource pages rot fast, and the fix is usually a one-line edit to <code>index.html</code>.</p>
+    </div>
+  </div>
+  <div class="sprocket-row" aria-hidden="true"></div>
+</footer>
+
+<script src="assets/script.js"></script>
+</body>
+</html>
